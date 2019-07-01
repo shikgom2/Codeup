@@ -1,0 +1,31 @@
+#include <stdio.h>
+  
+void f(int k, int t)
+{
+    if(k == 1)
+    {
+        printf("1");
+        return ;
+    }
+      
+    if(t == 1)
+    {
+        f(k-1, k-1);
+        printf("\n");
+    }
+    else
+        f(k, t-1);
+      
+    printf("%d ", t);
+    return ;
+}
+  
+int main ()
+{
+    int n;
+      
+    scanf("%d", &n);
+    f(n, n);
+    return 0;
+}
+
